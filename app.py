@@ -69,7 +69,7 @@ def search_tweets():
                     user_tweet_count[user] = user_tweet_count.get(user, 0) + 1
 
                 # Calculate average likes
-                average_likes = total_likes / len(tweets) if tweets else 0
+                average_likes = round(total_likes / len(tweets),1) if tweets else 0
 
                 # user who posted the most tweets
                 top_user = max(user_tweet_count, key=user_tweet_count.get)
